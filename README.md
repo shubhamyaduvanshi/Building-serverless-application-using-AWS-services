@@ -49,3 +49,25 @@ Return to the AWS Lambda console, and paste the copied code into lambda_function
 Click Deploy.
 In Function Overview at the top, copy the Function ARN, and paste it into a text file for later use.
 
+# Create a Step Function State Machine
+
+In a new browser tab, navigate to the Step Functions.
+Click Get started to run the Hello World example.
+In the line under the Review Hello World example title, click here to access more functionality. (Click Leave if prompted with a warning, and then click here again.)
+Select Write your workflow in code.
+Under Type, select Standard.
+Return to the GitHub repo, and click the step-function-template.json file.
+Click Raw, and copy the code.
+Return to Step Functions, and under Definition, delete the current contents and replace it with your copied code. Ensure all values you add in the next 2 steps remain wrapped in double quotes.
+On lines 34 and 52, replace the Resource placeholder value with the copied ARN for email.
+On lines 40 and 62, replace the Resource placeholder value with the copied ARN for sms.
+Click the refresh icon to the right of the code to view the updated function diagram.
+Click Next.
+Under Permissions, select Choose an existing role.
+Under Existing roles, select RoleForStepFunction.
+Scroll to the bottom, and click Create state machine.
+Under Details, copy the ARN.
+Return to the Lambda api_handler function.
+Scroll down to Code source and double-click lambda_function.py.
+On line 6, replace the SFN_ARN placeholder value with the ARN you just copied.
+Click Deploy.
