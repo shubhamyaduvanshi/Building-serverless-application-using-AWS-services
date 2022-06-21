@@ -29,4 +29,10 @@ Under Identity details, select Email address.
 Enter your email address, and click Create identity.
 In a new browser tab or email client, navigate to your email, open the SES verification email, and click the provided link. Check your spam mail if you do not see it in your inbox.
 Go back to Lambda.
+# updating lambda
+Within the Lambda function, delete the YOUR_SES_VERIFIED_EMAIL placeholder, and type in the following replacing YOUR_EMAIL with your verified email address:
 
+VERIFIED_EMAIL = 'YOUR_EMAIL'
+Click Deploy.
+
+In Function Overview at the top, copy the Function ARN, and paste it into a text file for later use.
