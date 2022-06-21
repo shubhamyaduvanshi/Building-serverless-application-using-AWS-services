@@ -156,3 +156,24 @@ Error document: error.html
 Click Save changes.
 
 Scroll down again to Static website hosting, and click the Bucket website endpoint URL to access the webpage.
+
+
+# Testing the Static S3 Website
+
+To test the service's functionality, set the following values:
+Seconds to wait: 1
+Message: Hello
+
+someone@something.com: Your email address
+Under Reminder Type, select email. You should see {"Status":"Success"} at the bottom of the page.
+
+Check your email. You should now see a reminder email from the service.
+
+Note: Check your spam folder if you do not see it in your inbox.
+
+Navigate to AWS Step Functions.
+
+Click MyStateMachine to open it.
+
+Under Executions, click on the link for the event that just occurred, and scroll down to Graph inspector to view the event's visual workflow.
+
