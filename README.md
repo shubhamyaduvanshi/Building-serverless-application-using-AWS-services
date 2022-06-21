@@ -71,3 +71,36 @@ Return to the Lambda api_handler function.
 Scroll down to Code source and double-click lambda_function.py.
 On line 6, replace the SFN_ARN placeholder value with the ARN you just copied.
 Click Deploy.
+
+# CReate API gateway
+
+#1. Create the API Gateway
+#2.In the AWS Management Console, navigate to API Gateway.
+#3Under Choose an API type, go to REST API (not Private), and then select Build.
+#4Under Choose the protocol, select REST.
+#5Under Create new API, select New API.
+#6Under Settings, set the following values:
+#7API name: reminders
+#8Endpoint Type: Regional
+#9Click Create API.
+#10Click Actions > Create Resource.
+#11In Resource Name, enter reminders.
+#12Select Enable API Gateway CORS.
+#13Click Create Resource.
+#14With /reminders selected, click Actions > Create Method.
+#15In the new dropdown under /reminders, select POST and click the adjacent checkmark icon.
+#16In /reminders - POST - Setup, set the following values:
+#17Integration type: Lambda Function
+#18Use Lambda Proxy integration: Selected
+#19Lambda Region: us-east-1
+#20Lambda Function: api_handler
+#21Click Save.
+#22Click OK.
+#23Click Actions > Deploy API.
+#24Set the following values:
+Deployment stage: New Stage
+Stage name: prod
+Click Deploy.
+Note: You may ignore any Web Application Firewall (WAF) permissions warning messages received after deployment.
+
+At the top of the page, under prod Stage Editor, copy the Invoke URL for later use.
