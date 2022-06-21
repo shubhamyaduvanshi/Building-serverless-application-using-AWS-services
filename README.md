@@ -36,3 +36,16 @@ VERIFIED_EMAIL = 'YOUR_EMAIL'
 Click Deploy.
 
 In Function Overview at the top, copy the Function ARN, and paste it into a text file for later use.
+
+# Create the sms Lambda Function
+Click Create function.
+Scroll down to Code source, and double-click lambda_function.py to display the function code.
+Delete the provided code.
+In a new browser tab, open the GitHub repo for this lab.
+Click the sms_reminder.py file.
+Click Raw to display the raw function code.
+Copy the code.
+Return to the AWS Lambda console, and paste the copied code into lambda_function.py.
+Click Deploy.
+In Function Overview at the top, copy the Function ARN, and paste it into a text file for later use.
+
