@@ -104,3 +104,55 @@ Click Deploy.
 Note: You may ignore any Web Application Firewall (WAF) permissions warning messages received after deployment.
 
 At the top of the page, under prod Stage Editor, copy the Invoke URL for later use.
+
+# create Static S3 websites
+Return to the GitHub repo, and download a local copy of the static_website folder with its file contents. You can go to the static_website folder and download a copy of each file, or you can go to the main repository, click Code, and select Download ZIP to get all of the files in the repo.
+
+In your local static_website folder, open the formlogic.js file.
+
+On line 5, delete the API_ENDPOINT placeholder text, and paste in the Invoke URL you previously copied from API Gateway, keeping /reminders on the end of the string:
+
+var API_ENDPOINT = 'UPDATETOYOURINVOKEURLENDPOINT/reminders';
+In the AWS Management Console, navigate to S3.
+
+Click Create bucket.
+
+In Bucket name, enter a globally unique bucket name.
+
+Under Object Ownership, select ACLs enabled, and ensure Bucket owner preferred is selected.
+
+Uncheck Block all public access.
+
+Select I acknowledge that the current settings might result in this bucket and the objects within becoming public.
+
+Scroll down, and click Create bucket.
+
+Select the new bucket to open it.
+
+Click Upload > Add files.
+
+Find your local copy of the static_website folder, select all the files and click Open.
+
+Scroll down, and click Permissions to expand access options.
+
+Under Predefined ACLs, select Grant public-read access.
+
+Select I understand the risk of granting public-read access to the specified objects.
+
+Click Upload.
+
+Once uploaded, click Close.
+
+Click the Properties tab.
+
+Scroll down to Static website hosting, and click Edit.
+
+Select Enable.
+
+Set the following values:
+
+Index document: index.html
+Error document: error.html
+Click Save changes.
+
+Scroll down again to Static website hosting, and click the Bucket website endpoint URL to access the webpage.
