@@ -21,3 +21,12 @@ Runtime: Python 3.8
 10.Click Raw above the code to display the raw function code.
 11.Copy the code.
 12. Return to the AWS Lambda console, and paste the copied code in to lambda_function.py. Keep this tab open for later
+
+# Verify an Email Address in Simple Email Service (SES)
+Open a new browser tab, and navigate to Simple Email Service.
+On the left-side menu, under Configuration, go to Verified identities, and click Create identity.
+Under Identity details, select Email address.
+Enter your email address, and click Create identity.
+In a new browser tab or email client, navigate to your email, open the SES verification email, and click the provided link. Check your spam mail if you do not see it in your inbox.
+Go back to Lambda.
+
